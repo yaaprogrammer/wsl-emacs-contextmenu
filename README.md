@@ -10,14 +10,21 @@ The scripts will start X server automatically.
 
 ## Getting Started
 
-1. Copy `emacs_start.sh` to wsl user's home.
-2. Edit `powershellScriptPath` in `emacs_start.vbs`.
+1. Open powershell as administrator
+2. Set powershell executionPolicy
+
+   ```powershell
+   Set-ExecutionPolicy Unrestricted
+   ```
+
+3. Copy `emacs_start.sh` to wsl user's home.
+4. Edit `powershellScriptPath` in `emacs_start.vbs`.
 
     ```vbs
     powershellScriptPath="D:\emacs\wsl-emacs-contextmenu\emacs_start.ps1"
     ```
 
-3. Edit some variables in `emacs_start.ps1`.
+5. Edit some variables in `emacs_start.ps1`.
 
    ```powershell
     $wslUserName = "smj"
@@ -27,8 +34,8 @@ The scripts will start X server automatically.
     $wsl = "ubuntu.exe"
    ```
 
-4. Edit paths in `EditWithEmacs.reg`.
-5. Import registry `EditWithEmacs.reg`.
-6. Copy `Emacs GUI.lnk` to your desktop and modify its property, or create a new shortcut on yourself.
-7. if some error occurs, set `visible` in `emacs_start.vbs` to `1` and see what happened.
-8. `emacs_start.sh` set some environment variables for the X server,  modify it if you need.
+6. Edit paths in `EditWithEmacs.reg`.
+7. Import registry `EditWithEmacs.reg`.
+8. Copy `Emacs GUI.lnk` to your desktop and modify its property, or create a new shortcut on yourself.
+9. if some error occurs, set `visible` in `emacs_start.vbs` to `1` and see what happened.
+10. `emacs_start.sh` set some environment variables for the X server,  modify it if you need.
